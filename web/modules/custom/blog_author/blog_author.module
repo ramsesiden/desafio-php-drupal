@@ -1,0 +1,23 @@
+<?php
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+/**
+ * Implements hook_entity_view_alter().
+ */
+function blog_author_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  // Check if the entity is of type 'node' and the view mode is 'full'.
+  if ($entity->getEntityTypeId() == 'node'  && $display->getMode() == 'default') {
+    // Check if the content type is 'blog'.
+    if ($entity->bundle() == 'blog') {
+      // Get the author information.
+      $author = $entity->getOwner();
+      $author_name = $author->getDisplayName();
+
+      // Add author information to the content.
+      $build['author_info'] = [
+        '#markup' => '<div class="author-info">Written by: ' . $author_name . '</div>',
+        '#weight' => 10,
+      ];
+    }
+  }
+}

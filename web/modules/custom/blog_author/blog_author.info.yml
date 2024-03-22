@@ -1,0 +1,5 @@
+name: 'Blog Author Info'
+type: module
+description: 'Adds author information to every post of the content type Blog.'
+package: Custom
+core_version_requirement: ^9 || ^10
