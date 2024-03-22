@@ -1,0 +1,22 @@
+uuid: 1b619c98-f825-4dba-af76-9cf6d358007f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - desafio2
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: desafio2_help
+theme: desafio2
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

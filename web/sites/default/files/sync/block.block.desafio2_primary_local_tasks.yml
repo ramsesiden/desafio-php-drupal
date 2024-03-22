@@ -1,0 +1,22 @@
+uuid: 066b1e32-5888-4bcd-9e63-97a1ed319b92
+langcode: en
+status: true
+dependencies:
+  theme:
+    - desafio2
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: desafio2_primary_local_tasks
+theme: desafio2
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
